@@ -1,12 +1,13 @@
 <template>
   <div class="container">
-    
+    <h1>Start</h1>
+    <router-link to="/about" class="start" @click="diseable">Chat</router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Theme',
   data () {
     return {
       cat: ''

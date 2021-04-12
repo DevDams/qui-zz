@@ -1,7 +1,7 @@
 <template>
   <div class="container welcome">
     <h1>Bienvenue sur Qui-zz</h1>
-    <router-link to="/" class="start" @click="diseable">Commencer</router-link>
+    <router-link to="/start" class="start" @click="diseable">Commencer</router-link>
   </div>
 </template>
 
