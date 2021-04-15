@@ -4,6 +4,10 @@
       <h2>Thème : <span>{{ theme}}</span></h2>
     </div>
     <div class="question_box">
+      <div class="counter">
+        <span>Question : {{ index + 1 }}</span>
+        <span>Réponse correcte : {{ correct }}</span>
+      </div>
       <div class="question">
         <p>{{ currentQuestion.question }}</p>
         <hr>
@@ -11,10 +15,19 @@
           v-for="(answer, index) in currentQuestion.propositions"
           :key="index"
           @click="selectAnswer(index)"
-          :class="[select === index ? 'selected' : '']"
+          class="isCorrect"
+          :class="[
+            !submit && select === index ? 'selected' : 
+            submit && select === index && currentQuestion.réponse === currentQuestion.propositions[select] ? 'true' : 
+            submit && select === index && currentQuestion.réponse !== currentQuestion.propositions[select] ? 'dd' : 
+            submit && select !== index && currentQuestion.réponse !== currentQuestion.propositions[select] ? 'true' : ''
+          ]"
         > {{ answer }} </p>
       </div>
       <button @click="nextQuestion">Suivant</button>
+      <button @click="submitQuestion" :disabled="select === null">Valider</button>
+      <hr>
+      <p v-if="submit">{{ currentQuestion.anecdote }}</p>
     </div>
   </div>
 </template>
@@ -23,19 +36,38 @@
 export default {
   data () {
     return {
-      select: null
+      validate: true,
+      submit: false,
+      select: null,
+      correct: 0,
+      correctIndex: null 
     }
   },
-  props: ['currentQuestion', 'theme', 'nextQuestion'],
+  props: ['index', 'currentQuestion', 'theme', 'nextQuestion'],
   watch: {
     currentQuestion () {
       this.select = null
+      this.submit = false
+      this.validate = true
     }
   },
   methods: {
     selectAnswer (index) {
-      this.select = index
-      console.log(this.select)
+      if (this.validate) {
+        this.select = index
+      }
+    },
+    submitQuestion () {
+      // this.select = null
+      this.submit = true
+      this.validate = false
+      let correct_choice = document.querySelector('.selected')
+      if (this.currentQuestion.réponse === this.currentQuestion.propositions[this.select]) {
+        this.correct++
+        correct_choice.classList.add('correct_answer')
+      } else {
+        console.log(this.currentQuestion.réponse)
+      }
     }
   }
 }
@@ -68,6 +100,14 @@ export default {
 }
 
 .selected {
+  color: lightblue;
+}
+
+.true {
+  color: green;
+}
+
+.dd {
   color: red;
 }
 </style>

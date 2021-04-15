@@ -4,7 +4,8 @@
       <Question
         :theme="questions.thème"
         :currentQuestion="questions.quizz.fr.débutant[index]"
-        :nextQuestion="next " />
+        :nextQuestion="next"
+        :index="index" />
   </div>
 </template>
 
@@ -15,7 +16,6 @@ export default {
   name: 'Chat',
   data () {
     return {
-      about: 'AZER',
       questions: this.$store.state.catTheme,
       index: 0
     }
