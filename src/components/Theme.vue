@@ -4,7 +4,7 @@
     <div class="cards">
       <div class="cat">
         <h3>Chat</h3>
-        <router-link to="/about">
+        <router-link to="/chat">
           <div class="theme theme-1">
             <img src="@/assets/icon/cat.svg" alt="cat icon">
           </div>
@@ -12,7 +12,7 @@
       </div>
       <div class="sante">
         <h3>Santé</h3>
-        <router-link to="/about">
+        <router-link to="/sante">
           <div class="theme theme-2">
             <img src="@/assets/icon/health.svg" alt="cat icon">
           </div>
@@ -20,7 +20,7 @@
       </div>
       <div class="Mystere">
         <h3>Mystère</h3>
-        <router-link to="/about">
+        <router-link to="/mystere">
           <div class="theme theme-3">
             <img src="@/assets/icon/hide.svg" alt="cat icon">
           </div>
@@ -28,7 +28,7 @@
       </div>
       <div class="culture">
         <h3>Culture générale</h3>
-        <router-link to="/about">
+        <router-link to="/culture-generale">
           <div class="theme theme-4">
             <img src="@/assets/icon/brain.svg" alt="cat icon">
           </div>
@@ -36,7 +36,7 @@
       </div>
       <div class="corps-humain">
         <h3>Corps hmain</h3>
-        <router-link to="/about">
+        <router-link to="/corps-humain">
           <div class="theme theme-5">
             <img src="@/assets/icon/human-body.svg" alt="cat icon">
           </div>
@@ -81,17 +81,19 @@ export default {
 h1 {
   text-transform: uppercase;
   letter-spacing: -2px;
+  line-height: 1.1em;
+  color: #005B48;
 }
 
 h3 {
-  font-weight: 300;
-  margin: 15px 0;
-  color: #F97D7D;
+  font-weight: 600;
+  color: #2F4858;
+  margin-top: 40px;
 }
 
 .cards {
-  width: 70%;
-  margin: 100px auto 0;
+  width: 100%;
+  margin: 60px auto 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -103,7 +105,7 @@ h3 {
   justify-content: center;
   width: 150px;
   height: 170px;
-  margin-top: 30px;
+  margin-top: 10px;
   border-radius: 12px;
   background: linear-gradient(145deg, #dbd6c3, #ffffe8);
   box-shadow:  11px 11px 33px #d6d1bf,

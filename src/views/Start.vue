@@ -1,11 +1,13 @@
 <template>
   <div class="container">
+    <Navbar />
     <Theme />
   </div>
 </template>
 
 <script>
 import Theme from '@/components/Theme.vue'
+import Navbar from '@/components/Navbar.vue'
 export default {
   name: 'Start',
   data () {
@@ -13,7 +15,8 @@ export default {
     }
   },
   components: {
-    Theme
+    Theme,
+    Navbar
   },
   methods: {
   }

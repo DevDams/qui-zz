@@ -125,9 +125,7 @@
         ],
         "réponse": "Carnivore",
         "anecdote": "Tous les mammifères carnassiers ne sont pas forcément membres de l'ordre des carnivores."
-      }
-    ],
-    "confirmé": [
+      },
       {
         "id": 11,
         "question": "Comment appelle-t-on les longs poils présents sur les moustaches du chat ?",
@@ -247,9 +245,7 @@
         ],
         "réponse": "18",
         "anecdote": "Le chat peut ajuster la longueur de ses griffes et les aiguiser en les frottant contre une surface rugueuse : il « fait ses griffes »."
-      }
-    ],
-    "expert": [
+      },
       {
         "id": 21,
         "question": "Quel pourcentage les chats de race représentent-ils parmi la population totale ?",
