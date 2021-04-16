@@ -5,7 +5,7 @@
     </div>
     <div class="question_box">
       <div class="counter">
-        <span>Question : {{ index + 1 }}</span>
+        <span>Question : {{ index + 1 }}/30</span>
         <span>Réponse correcte : {{ correct }}</span>
       </div>
       <div class="question">
@@ -20,7 +20,7 @@
             !submit && select === index ? 'selected' : 
             submit && select === index && currentQuestion.réponse === currentQuestion.propositions[select] ? 'true' : 
             submit && select === index && currentQuestion.réponse !== currentQuestion.propositions[select] ? 'dd' : 
-            submit && select !== index && currentQuestion.réponse !== currentQuestion.propositions[select] ? 'true' : ''
+            submit && select !== correctIndex && currentQuestion.réponse === currentQuestion.propositions[correctIndex] ? 'ee': ''
           ]"
         > {{ answer }} </p>
       </div>
@@ -61,13 +61,20 @@ export default {
       // this.select = null
       this.submit = true
       this.validate = false
+
       let correct_choice = document.querySelector('.selected')
+      
       if (this.currentQuestion.réponse === this.currentQuestion.propositions[this.select]) {
         this.correct++
         correct_choice.classList.add('correct_answer')
       } else {
         console.log(this.currentQuestion.réponse)
       }
+
+      if (this.currentQuestion.propositions.includes(this.currentQuestion.réponse)) {
+        this.corretIndex = this.currentQuestion.propositions.indexOf(this.currentQuestion.réponse)
+      }
+      console.log(this.corretIndex)
     }
   }
 }
@@ -109,5 +116,9 @@ export default {
 
 .dd {
   color: red;
+}
+
+.ee {
+  color: coral;
 }
 </style>
