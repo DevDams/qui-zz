@@ -6,7 +6,7 @@
         <h3>Chat</h3>
         <router-link to="/chat">
           <div class="theme theme-1">
-            <img src="@/assets/icon/cat.svg" alt="cat icon">
+            <img src="@/assets/icon/cat2.svg" alt="cat icon">
           </div>
         </router-link>
       </div>
@@ -14,7 +14,7 @@
         <h3>Santé</h3>
         <router-link to="/sante">
           <div class="theme theme-2">
-            <img src="@/assets/icon/health.svg" alt="cat icon">
+            <img src="@/assets/icon/health2.svg" alt="cat icon">
           </div>
         </router-link>
       </div>
@@ -22,7 +22,7 @@
         <h3>Mystère</h3>
         <router-link to="/mystere">
           <div class="theme theme-3">
-            <img src="@/assets/icon/hide.svg" alt="cat icon">
+            <img src="@/assets/icon/secret.svg" alt="cat icon">
           </div>
         </router-link>
       </div>
