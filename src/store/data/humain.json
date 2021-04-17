@@ -125,9 +125,7 @@
         ],
         "réponse": "Coccyx",
         "anecdote": "Le coccyx est considéré comme une structure vestigiale, reliquat d'une queue que possédaient les ancêtres de l'Homme."
-      }
-    ],
-    "confirmé": [
+      },
       {
         "id": 11,
         "question": "De manière générale, quel pourcentage du poids du corps les muscles représentent-ils ?",
@@ -247,9 +245,7 @@
         ],
         "réponse": "26",
         "anecdote": "Chez l'Homme, la main est un organe extrêmement développé et important, elle dispose d'une palette d'actions très large."
-      }
-    ],
-    "expert": [
+      },
       {
         "id": 21,
         "question": "De combien d'os le squelette du bébé, sorti du ventre de sa mère, est-il constitué ?",

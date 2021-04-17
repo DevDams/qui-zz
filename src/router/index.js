@@ -24,6 +24,26 @@ const routes = [
     path: '/chat',
     name: 'Chat',
     component: () => import('../views/Chat.vue')
+  },
+  {
+    path: '/sante',
+    name: 'Sante',
+    component: () => import('../views/Sante.vue')
+  },
+  {
+    path: '/corps-humain',
+    name: 'Humain',
+    component: () => import('../views/Humain.vue')
+  },
+  {
+    path: '/mystere',
+    name: 'Mystere',
+    component: () => import('../views/Mystere.vue')
+  },
+  {
+    path: '/culture-generale',
+    name: 'Culture',
+    component: () => import('../views/Culture.vue')
   }
 ]
 

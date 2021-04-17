@@ -3,6 +3,16 @@
     <div class="theme">
       <h2>Thème : <span>{{ theme}}</span></h2>
     </div>
+    <div class="popup" v-show="popup">
+      <p>
+        Terminé ! <br> Vous avez eu {{ correct }} réponses correctes.
+        <button>
+          <router-link to="/start">
+            Retour
+          </router-link>
+        </button>
+      </p>
+    </div>
     <div class="question_box">
       <div class="counter">
         <p class="question_number"><span>Question :</span> {{ index + 1 }}/30</p>
@@ -43,6 +53,7 @@ export default {
     return {
       validate: true,
       submit: false,
+      popup: false,
       select: null,
       correct: 0,
       correctIndex: null 
@@ -72,15 +83,16 @@ export default {
         this.correct++
         correct_choice.classList.add('correct_answer')
       } else {
-        console.log(this.currentQuestion.réponse)
+        console.log('')
       }
 
       if (this.currentQuestion.propositions.includes(this.currentQuestion.réponse)) {
-        this.corretIndex = this.currentQuestion.propositions.indexOf(this.currentQuestion.réponse)
+        this.correctIndex = this.currentQuestion.propositions.indexOf(this.currentQuestion.réponse)
       }
+
     },
     score () {
-      console.log("nombre de bonne réponse", this.correct)
+      this.popup = true
     }
   }
 }
@@ -107,6 +119,43 @@ export default {
 .theme h2 span {
   text-transform: capitalize;
   color: #131313;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 300px;
+  margin: auto;
+  border: 1px solid white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1B695F;
+  color: white;
+}
+
+.popup p {
+  font-size: 18px;
+}
+
+.popup button {
+  position: relative;
+  display: inline-block;
+  top: 60px;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+}
+
+.popup button a {
+  text-decoration: none;
+  color: #005B48;
 }
 
 .question_box {
@@ -150,9 +199,9 @@ export default {
 
 .question_box .answer {
   border: 1px solid rgba(255, 255, 255, 0.445);
-  margin: 25px 0;
-  padding: 16px 0;
-  border-radius: 6px;
+  margin: 35px 0;
+  padding: 18px 0;
+  border-radius: 8px;
   background: linear-gradient(145deg, #ffffe8, #dbd6c3);
   box-shadow:  11px 11px 24px #d8d4c1,
               -11px -11px 24px #fffff14f;
