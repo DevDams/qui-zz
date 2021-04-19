@@ -112,7 +112,7 @@ h3 {
 }
 
 .theme img {
-  width: 60px;
+  width: 55px;
 }
 
 @media (min-width: 500px) {
@@ -129,8 +129,12 @@ h3 {
 
 @media (max-width: 360px) {
   .theme {
-    width: 170px;
-    height: 180px;
+    width: 130px;
+    height: 160px;
+  }
+
+  .theme img {
+    width: 45px;
   }
 }
 </style>

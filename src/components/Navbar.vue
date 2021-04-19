@@ -5,7 +5,7 @@
         <h1>Qui-zz.</h1>
       </router-link>
       <router-link to="/start">
-        <h1>Thème</h1>
+        <h1>thème</h1>
       </router-link>
     </div>
   </div>
@@ -28,7 +28,7 @@ export default {
 .content {
   width: 90%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: auto;
   text-align: left;
 }
@@ -37,6 +37,16 @@ a {
   text-decoration: none;
   color: white;
   letter-spacing: -1px;
-  font-size: 14px;
+  font-size: 12px;
+}
+
+a h1 {
+  font-weight: 400;
+}
+
+@media (min-width: 986px) {
+  .content {
+    justify-content: space-around;
+  }
 }
 </style>
