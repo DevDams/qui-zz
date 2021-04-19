@@ -4,6 +4,9 @@
       <router-link to="/">
         <h1>Qui-zz.</h1>
       </router-link>
+      <router-link to="/start">
+        <h1>Thème</h1>
+      </router-link>
     </div>
   </div>
 </template>
@@ -24,13 +27,16 @@ export default {
 
 .content {
   width: 90%;
+  display: flex;
+  justify-content: space-around;
   margin: auto;
   text-align: left;
 }
 
 a {
   text-decoration: none;
-  color: #F97D7D;
+  color: white;
   letter-spacing: -1px;
+  font-size: 14px;
 }
 </style>

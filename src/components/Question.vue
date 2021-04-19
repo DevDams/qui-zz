@@ -30,7 +30,7 @@
           :class="[
             !submit && select === index ? 'selected' : 
             submit && select === index && currentQuestion.réponse === currentQuestion.propositions[select] ? 'true' : 
-            submit && select === index && currentQuestion.réponse !== currentQuestion.propositions[select] ? 'dd' : ''
+            submit && select === index && currentQuestion.réponse !== currentQuestion.propositions[select] ? 'false' : ''
           ]"
         >{{ answer }}</p>
       </div>
@@ -101,7 +101,7 @@ export default {
 <style scoped>
 .container {
   width: 90%;
-  margin: auto;
+  margin: 100px auto;
   margin-bottom: 100px;
 }
 
@@ -117,7 +117,8 @@ export default {
 }
 
 .theme h2 span {
-  text-transform: capitalize;
+  text-transform: lowercase;
+  font-weight: 500;
   color: #131313;
 }
 
@@ -189,7 +190,6 @@ export default {
 }
 
 .question_box .question p {
-  font-weight: 500;
   font-size: 18px;
 }
 
@@ -209,7 +209,7 @@ export default {
 }
 
 .question_box .button {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .question_box .button button {
@@ -217,14 +217,12 @@ export default {
   height: 40px;
   outline: none;
   color: black;
-  border: 1px solid #2f485891;
-  border-radius: 12px;
+  border: 1px solid black;
+  border-radius: 8px;
   margin: 0 10px;
   font-weight: 700;
   text-transform: uppercase;
   background: #F3EED9;
-box-shadow: inset 11px 11px 24px #d8d4c1,
-            inset -11px -11px 24px #fffff1;
 }
 
 .question_box .anecdote {
@@ -246,13 +244,9 @@ box-shadow: inset 11px 11px 24px #d8d4c1,
   color: white;
 }
 
-.dd {
+.false {
   background: #F97D7D !important;
   color: white;
-}
-
-.ee {
-  color: coral;
 }
 
 @media (max-width: 350px) {
@@ -266,6 +260,17 @@ box-shadow: inset 11px 11px 24px #d8d4c1,
 
   .question_box .counter .question_number, .correct_question {
     margin-top: 5px;
+  }
+}
+
+@media (min-width: 767px) {
+  .container {
+    width: 700px;
+    margin-top: 150px;
+  }
+
+  .question_box .answer {
+    padding: 22px 0;
   }
 }
 </style>

@@ -75,11 +75,10 @@ export default {
 <style scoped>
 .container {
   width: 90%;
-  margin: 100px auto;
+  margin: 120px auto;
 }
 
 h1 {
-  text-transform: uppercase;
   letter-spacing: -2px;
   line-height: 1.1em;
   color: #005B48;
@@ -87,7 +86,7 @@ h1 {
 
 h3 {
   font-weight: 600;
-  color: #2F4858;
+  color: #3B3828;
   margin-top: 40px;
 }
 
@@ -107,12 +106,31 @@ h3 {
   height: 170px;
   margin-top: 10px;
   border-radius: 12px;
-  background: linear-gradient(145deg, #dbd6c3, #ffffe8);
-  box-shadow:  11px 11px 33px #d6d1bf,
-             -11px -11px 33px #fffff3;
+  background: #f3eed9;
+  box-shadow:  6px 6px 30px #cfcab8,
+              -4px -4px 10px #fffffa;
 }
 
 .theme img {
   width: 60px;
+}
+
+@media (min-width: 500px) {
+  .theme {
+    margin: 10px 10px 0;
+  }
+}
+
+@media (min-width: 754px) {
+  .cards {
+    width: 670px;
+  }
+}
+
+@media (max-width: 360px) {
+  .theme {
+    width: 170px;
+    height: 180px;
+  }
 }
 </style>

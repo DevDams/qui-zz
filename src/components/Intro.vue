@@ -70,4 +70,20 @@ h1 {
   text-transform: uppercase;
   letter-spacing: -2px;
 }
+
+@media (min-height: 750px) {
+  .container {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 767px) {
+  .container {
+    height: 100vh;
+  }
+
+  .creativity {
+    width: 100%;
+  }
+}
 </style>
